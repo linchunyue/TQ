@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0">
+	<!-- /*viewport：解决适口问题*/ -->
+	<title>天气APP</title>
+	<link rel="stylesheet" href="css/public.css">
+	<link rel="stylesheet" href="css/index.css">
+	<script src="js/rem.js"></script>  
+	<!-- /*script:引进js文件*/ -->
+	<link rel="icon" href="img/logo.ico" type="image/x-icon">
+</head>
+<body>
+	<!-- 当前信息 -->
+	<section id="now">
+		<!-- 当前城市 -->
+		<h1 class="now_city">
+			<span class="address_icon">&lt;</span>
+			<sapn class="now_city_name">太原</sapn>
+		</h1>
+
+		<!-- 当前空气质量 -->
+		<div class="now_air">
+			<h1>空气</h1>
+			<h2>良</h2>
+		</div>
+
+		<!-- 当前温度 -->
+		<h2 class="now_temp">
+			<span>-3</span>°
+		</h2>
+
+		<!-- 当前天气 -->
+		<h3 class="now_weather">晴</h3>
+
+		<!-- 当前风向以及风级 -->
+		<h1 class="now_wind">
+			<span class="now_wind_direction">北风</span>
+			<sapn class="now_wind_scale">3</sapn>级
+		</h1>
+
+		<!-- 提示(静态) -->
+		<h1 class="now_prompt">
+			天气冷了，注意保暖~
+		</h1>
+	</section>
+
+	<!-- 未来两天的天气信息-->
+	<section id="future">
+		<div class="future_box today">
+			<div class="future_top">
+				<span class="future_date">今天</span>
+				<p><span class="today_higtemp">4</span>/<span class="today_lowtemp">-10</span>°C</p>
+			</div>
+			<div class="future_top">
+				<span class="today_weather">多云</span>
+				<div class="today_img">
+					<img src="img/1.png" alt="">
+				</div>
+			</div>
+		</div>
+		<div class="future_box tomorrow">
+			<div class="future_top">
+				<span class="future_date">明天</span>
+				<p><span class="tomorrow_higtemp">5</span>/<span class="tomorrow_lowtemp">-7</span>°C</p>
+			</div>
+			<div class="future_top">
+				<span class="tomorrow_weather">多云</span>
+				<div class="tomorrow_img">
+					<img src="img/1.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 未来24小时 -->
+	<ul id="hours">
+		<li>
+			<h1 class="hours_time">8:00</h1>
+			<div class="hours_img"><img src="img/0.png" alt=""></div>
+			<h2 class="hours_temp"><span>-8</span>°</h2>
+		</li>
+
+		<li>
+			<h1 class="hours_time">9:00</h1>
+			<div class="hours_img"><img src="img/0.png" alt=""></div>
+			<h2 class="hours_temp"><span>-3</span>°</h2>
+		</li>
+
+		<li>
+			<h1 class="hours_time">10:00</h1>
+			<div class="hours_img"><img src="img/0.png" alt=""></div>
+			<h2 class="hours_temp"><span>-1</span>°</h2>
+		</li>
+
+		<li>
+			<h1 class="hours_time">11:00</h1>
+			<div class="hours_img"><img src="img/0.png" alt=""></div>
+			<h2 class="hours_temp"><span>0</span>°</h2>
+		</li>
+
+		<li>
+			<h1 class="hours_time">8:00</h1>
+			<div class="hours_img"><img src="img/0.png" alt=""></div>
+			<h2 class="hours_temp"><span>1</span>°</h2>
+		</li>
+
+		<li>
+			<h1 class="hours_time">12:00</h1>
+			<div class="hours_img"><img src="img/0.png" alt=""></div>
+			<h2 class="hours_temp"><span>-8</span>°</h2>
+		</li>
+
+		<li>
+			<h1 class="hours_time">13:00</h1>
+			<div class="hours_img"><img src="img/0.png" alt=""></div>
+			<h2 class="hours_temp"><span>-8</span>°</h2>
+		</li>
+	</ul>
+
+	<!-- 未来一周 -->
+	<ul id="week">
+		<li>
+			<h1 class="week_date">02/<span>06</span></h1>
+			<h1 class="week_weather">晴转多云</h1>
+			<div class="week_img"><img src="img/0.png" alt=""></div>
+			<h1 class="week_higtemp">4</h1>
+			<h1 class="week_higtemp">-14</h1>
+			<h1 class="week_higtemp">西北风</h1>
+			<h1 class="week_scale"><i>3</i>级</h1>
+		</li>
+
+		<li>
+			<h1 class="week_date">02/<span>06</span></h1>
+			<h1 class="week_weather">晴转多云</h1>
+			<div class="week_img"><img src="img/0.png" alt=""></div>
+			<h1 class="week_higtemp">4</h1>
+			<h1 class="week_higtemp">-14</h1>
+			<h1 class="week_higtemp">西北风</h1>
+			<h1 class="week_scale"><i>3</i>级</h1>
+		</li>
+
+		<li>
+			<h1 class="week_date">02/<span>07</span></h1>
+			<h1 class="week_weather">晴转多云</h1>
+			<div class="week_img"><img src="img/1.png" alt=""></div>
+			<h1 class="week_higtemp">4</h1>
+			<h1 class="week_higtemp">-14</h1>
+			<h1 class="week_higtemp">西北风</h1>
+			<h1 class="week_scale"><i>3</i>级</h1>
+		</li>
+
+		<li>
+			<h1 class="week_date">02/<span>08</span></h1>
+			<h1 class="week_weather">晴转多云</h1>
+			<div class="week_img"><img src="img/2.png" alt=""></div>
+			<h1 class="week_higtemp">4</h1>
+			<h1 class="week_higtemp">-14</h1>
+			<h1 class="week_higtemp">西北风</h1>
+			<h1 class="week_scale"><i>3</i>级</h1>
+		</li>
+
+		<li>
+			<h1 class="week_date">02/<span>09</span></h1>
+			<h1 class="week_weather">晴转多云</h1>
+			<div class="week_img"><img src="img/3.png" alt=""></div>
+			<h1 class="week_higtemp">4</h1>
+			<h1 class="week_higtemp">-14</h1>
+			<h1 class="week_higtemp">西北风</h1>
+			<h1 class="week_scale"><i>3</i>级</h1>
+		</li>
+
+		<li>
+			<h1 class="week_date">02/<span>10</span></h1>
+			<h1 class="week_weather">晴转多云</h1>
+			<div class="week_img"><img src="img/4.png" alt=""></div>
+			<h1 class="week_higtemp">4</h1>
+			<h1 class="week_higtemp">-14</h1>
+			<h1 class="week_higtemp">西北风</h1>
+			<h1 class="week_scale"><i>3</i>级</h1>
+		</li>
+
+		<li>
+			<h1 class="week_date">02/<span>11</span></h1>
+			<h1 class="week_weather">晴转多云</h1>
+			<div class="week_img"><img src="img/5.png" alt=""></div>
+			<h1 class="week_higtemp">4</h1>
+			<h1 class="week_higtemp">-14</h1>
+			<h1 class="week_higtemp">西北风</h1>
+			<h1 class="week_scale"><i>3</i>级</h1>
+		</li>
+	</ul>
+
+	<!-- 城市列表 -->
+	<main id="citys">
+		<header>
+			<input type="text"  class="search" placeholder="请输入搜索内容">
+			<h2 class="btn">取消</h2>
+		</header>	
+		<div class="hot_citys">
+			<h1>热门城市</h1>
+			<div class="hot_city_box1">
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+			</div>
+		</div>
+
+		<div class="hot_citys">
+			<h1>热门城市</h1>
+			<div class="hot_city_box2">
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+			</div>
+		</div>
+
+		<div class="hot_citys">
+			<h1>热门城市</h1>
+			<div class="hot_city_box3">
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+				<div class="hot_city"><span>太原</span></div>
+			</div>
+		</div>
+
+	</main>
+</body>
+</html>	
+
+
+
+
+
+<!-- 设计稿：750*1334    100*100
+iPhone8:375*667          50*50
+iPhone7:414*736          55.2*55.2
+
+
+设备像素
+设备像素是指设备中使用的物理像素，又称硬件像素
+
+css像素
+css像素是指css样式到吗中使用的逻辑像素。如果在一个设备中，硬件像素数与css像素数相等，将不会产生任何问题。但是，由于视网膜设备的出现，这两者之间的差异变得越来越大。硬件像素数与css像素数成为两种截然不同的像素。
+
+例如在iphone 4设备屏幕中的物理像素是640px*960px，而css逻辑像素数为320*480px。因此，使用大约4个物理像素来显示一个css像素。
+
+PC：1物理像素=1逻辑像素  单位：px
+移动端：   单位：rem（倍）：根据根节点字体大小进行变化
+ 动态获取
+750的设备下    font=100px     1rem=100px
+375            font=50px      1rem=50px
+414            font=55.2px    1rem=55.2px
+
+
+
+em:根据当前元素字体大小进行变化 -->
